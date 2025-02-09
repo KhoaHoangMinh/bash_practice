@@ -17,6 +17,8 @@ calculate() {
 			else
 				echo "No history"
 			fi
+			read -n 1 -s -r
+			clear
 			continue
 		fi	
 
@@ -50,6 +52,9 @@ calculate() {
 			/)
 			if [ $num2 == 0 ]; then
 				echo "MATH ERROR"
+				read -n 1 -s -r
+				clear
+				continue
 			else
 				ANS=$(echo "scale=2; $num1 / $num2" | bc)
 			fi
@@ -58,6 +63,9 @@ calculate() {
 			%)
 			if [ $num2 == 0 ]; then
 		       		echo "MATH ERROR"
+				read -n 1 -s -r
+				clear
+				continue
 	 	      	else
 				ANS=$(($num1 / $num2))
 	 		fi		
@@ -65,7 +73,9 @@ calculate() {
 
 			*)
 			echo "SYNTAX ERROR"
-			break
+			read -n 1 -s -r
+			clear
+			continue
 			;;
 		esac
 		

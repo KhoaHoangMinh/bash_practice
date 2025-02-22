@@ -12,9 +12,10 @@ int main() {
     if (returnstatus == -1) {
         printf("Unable to create pipe\n");
         return 1;
-    }
-
+    } 
     pid = fork();
+    // call fork() to create a child process    
+
 
     // Child process
     if (pid == 0) {

@@ -4,7 +4,14 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <unistd.h>
+
 #define SHM_KEY 0x123
+
+/*
+ * Run the two following processes in two terminals. 
+ * At the writer process, you can type an input string and
+observe returns from the reader process.
+ */
 
 int main(int argc, char *argv[]) {
     int shmid;
